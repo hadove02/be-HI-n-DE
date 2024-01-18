@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using MySql.Data.MySqlClient;
-using Script;
 using UnityEngine;
 
 public class sampleDBtest : MonoBehaviour

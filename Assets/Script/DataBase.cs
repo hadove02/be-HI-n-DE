@@ -8,7 +8,7 @@ namespace Script
     {
         private string server = "127.0.0.1";
         private string port = "3306";
-        private string database = "dbtest";
+        private string database = "testSchema";
         private string id = "root";
         private string pw = "159633";
         private string connStr;
