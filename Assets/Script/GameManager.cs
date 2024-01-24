@@ -34,9 +34,5 @@ public class GameManager : MonoBehaviour
     {
         return player;
     }
-    public void send(string type)
-    {
-        Send.setStr(type);
-    }
 }
 

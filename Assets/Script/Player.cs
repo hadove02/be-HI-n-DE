@@ -1,4 +1,4 @@
-using System.Collections;
+        using System.Collections;
 using System.Collections.Generic;
 using Script;
 using Unity.VisualScripting;
@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public static Stat stat;
+    private static Character character;
     void Start()
     {
         
@@ -18,12 +18,13 @@ public class Player : MonoBehaviour
         
     }
 
-    void OnMouseDown()
+    public void info()
     {
-        Debug.Log(stat.ToString());
+        Debug.Log(character.ToString());
     }
-    public static void setStat(Stat st)
+    
+    public void setCharacter(Character ch)
     {
-        stat = st;
+        character = ch;
     }
 }
