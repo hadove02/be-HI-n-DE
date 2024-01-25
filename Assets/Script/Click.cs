@@ -1,12 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using Script;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Click : MonoBehaviour
 {
-    public static Stat stat;
+    public string str;
+    
     void Start()
     {
         
@@ -20,10 +19,7 @@ public class Player : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log(stat.ToString());
-    }
-    public static void setStat(Stat st)
-    {
-        stat = st;
+        GameManager.getGameManager().send(str);
+        Debug.Log("send");
     }
 }
