@@ -6,7 +6,9 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public static Stat stat;
+    private Charater charater;
+    private Skill[] skillSet = new Skill[4];
+    
     void Start()
     {
         
@@ -20,10 +22,24 @@ public class Player : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log(stat.ToString());
     }
-    public static void setStat(Stat st)
+
+    public void setCharater(Charater charater)
     {
-        stat = st;
+        this.charater = charater;
+    }
+
+    public void setSkillSet(Skill[] skillSet)
+    {
+        this.skillSet = skillSet;
+    }
+    
+    public void c_lassInfo()
+    {
+        Debug.Log(charater.ToString());
+        for (int i = 0; i < skillSet.Length; i++)
+        {
+            Debug.Log(skillSet[i].ToString());
+        }
     }
 }

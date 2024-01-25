@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Script;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -36,7 +37,21 @@ public class GameManager : MonoBehaviour
     }
     public void send(string type)
     {
-        Send.setStr(type);
+    }
+
+    public void setPlayerC_lass(Charater charater)
+    {
+        playerScript().setCharater(charater);
+    }
+
+    public void setSkills(Skill[] skills)
+    {
+        playerScript().setSkillSet(skills);
+    }
+
+    public Player playerScript()
+    {
+        return player.GetComponent<Player>();
     }
 }
 
