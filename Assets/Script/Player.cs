@@ -9,26 +9,15 @@ public class Player : MonoBehaviour
     private Charater charater;
     private Skill[] skillSet = new Skill[4];
     
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void OnMouseDown()
-    {
-    }
-
     public void setCharater(Charater charater)
     {
         this.charater = charater;
     }
 
+    public Charater getCharater()
+    {
+        return charater;
+    }
     public void setSkillSet(Skill[] skillSet)
     {
         this.skillSet = skillSet;

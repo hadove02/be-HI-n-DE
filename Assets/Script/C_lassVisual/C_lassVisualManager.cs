@@ -1,23 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class C_lassVisualManager : MonoBehaviour
 {
     private static C_lassVisualManager visualManager;
     private GameObject c_lassVisual;
-    
+
     void Start()
     {
         if (visualManager == null)
         {
             visualManager = this;
         }
-        c_lassVisual = GameObject.Find("C_lassVisual");
-    }
 
-    void Update()
-    {
+        c_lassVisual = GameObject.Find("C_lassVisual");
         
     }
 

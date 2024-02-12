@@ -8,6 +8,9 @@ public class Send : MonoBehaviour
     {
         Player player = GameManager.getGameManager().getPlayer().GetComponent<Player>();
         player.c_lassInfo();
+        SceneManagement.sceneChange("FightScene");
+        GameManager.getGameManager().setPlayer(player);
+        Debug.Log("yaho");
     }
 
     void Start()

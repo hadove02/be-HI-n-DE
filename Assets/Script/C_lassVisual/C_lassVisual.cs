@@ -10,10 +10,11 @@ public class C_lassVisual : MonoBehaviour
     {
         if (currentChanged != null)
         {
-            transform.Find(currentChanged).gameObject.SetActive(false);
+            Destroy(GameObject.Find(currentChanged+("(Clone)")));
         }
-
-        transform.Find(c_lass).gameObject.SetActive(true);
+        Instantiate(Resources.Load<GameObject>("SPUM/SPUM_Units/" + c_lass),
+            GameObject.Find("C_lassVisual").transform.position,
+            Quaternion.identity);
         currentChanged = c_lass;
     }
 }
