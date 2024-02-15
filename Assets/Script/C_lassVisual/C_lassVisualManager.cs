@@ -12,7 +12,7 @@ public class C_lassVisualManager : MonoBehaviour
             visualManager = this;
         }
 
-        c_lassVisual = GameObject.Find("C_lassVisual");
+        c_lassVisual = GameObject.Find("C_lassVisualVector");
         
     }
 
