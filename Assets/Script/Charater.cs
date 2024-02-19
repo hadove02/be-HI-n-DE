@@ -18,5 +18,10 @@
                    "\nmaxHealth > " + maxHealth +
                    " maxMana > " + maxMana;
         }
+
+        public string getName()
+        {
+            return name;
+        }
     }
 }

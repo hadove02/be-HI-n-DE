@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -23,9 +24,10 @@ public class SceneManagement : MonoBehaviour
         return sceneManagement;
     }*/
 
-    public static void sceneChange(string sceneName)
+    public static async Task<AsyncOperation> sceneChange(string sceneName)
     {
-        SceneManager.LoadScene(sceneName);
+        //SceneManager.LoadSceneAsync(sceneName);
+        return SceneManager.LoadSceneAsync(sceneName);
     }
         
 }

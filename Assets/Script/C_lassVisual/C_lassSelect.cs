@@ -40,8 +40,7 @@ public class C_lassSelect : MonoBehaviour
             skills[i++] = skill;
         }
         reader.Close();
-        GameManager.getGameManager().setPlayerC_lass(charater);
-        GameManager.getGameManager().setSkills(skills);
+        GameManager.getGameManager().getPlayerComponent().setPlayer(charater,skills);
         C_lassVisualManager.getVisualManager().changeVisual(c_lass);
         
     }

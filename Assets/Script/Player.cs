@@ -8,19 +8,22 @@ public class Player : MonoBehaviour
 {
     private Charater charater;
     private Skill[] skillSet = new Skill[4];
-    
-    public void setCharater(Charater charater)
+    public int test;
+
+    public void setPlayer(Charater charater, Skill[] skillSet)
     {
         this.charater = charater;
+        this.skillSet = skillSet;
     }
 
     public Charater getCharater()
     {
         return charater;
     }
-    public void setSkillSet(Skill[] skillSet)
+
+    public Skill[] getSkillSet()
     {
-        this.skillSet = skillSet;
+        return skillSet;
     }
     
     public void c_lassInfo()

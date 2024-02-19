@@ -48,6 +48,11 @@ public class GameManager : MonoBehaviour
     {
         return player;
     }
+
+    public Player getPlayerComponent()
+    {
+        return player.GetComponent<Player>();
+    }
     
     public void send(string type)
     {
@@ -56,19 +61,14 @@ public class GameManager : MonoBehaviour
     public void setPlayer(Player player)
     {
         Debug.Log("Destroy player");
-        Destroy(player.GetComponent<Player>());
+        Destroy(this.player.GetComponent<Player>());
+        this.player.AddComponent<Player>();
+        
+        /*
+        Player p = this.player.AddComponent<Player>();
+        p = player; */
     }
     
-    public void setPlayerC_lass(Charater charater)
-    {
-        playerScript().setCharater(charater);
-    }
-
-    public void setSkills(Skill[] skills)
-    {
-        playerScript().setSkillSet(skills);
-    }
-
     public Player playerScript()
     {
         return player.GetComponent<Player>();
