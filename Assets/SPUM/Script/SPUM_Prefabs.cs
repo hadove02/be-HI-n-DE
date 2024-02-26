@@ -30,7 +30,10 @@ public class SPUM_Prefabs : MonoBehaviour
         foreach (var clip in _animationClips)
         {
             int hash = Animator.StringToHash(clip.name);
-            _nameToHashPair.Add(clip.name, hash);
+            if (!_nameToHashPair.ContainsKey("2_Attack_Magic"))
+            {
+                _nameToHashPair.Add(clip.name, hash);
+            }
         }
     }
     private void Awake() {
